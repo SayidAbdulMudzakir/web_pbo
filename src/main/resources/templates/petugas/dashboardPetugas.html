@@ -37,31 +37,31 @@
 
           <div class="container mt-5">
             <h1>Daftar Paket MCU</h1>
-            <a href="/paket-mcu/create" class="btn btn-primary mb-3">Tambah Paket</a>
+            <a href="/src/main/resources/templates/paket-mcu/create.html" class="btn btn-primary mb-3">Tambah Paket</a>
             <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Nama Paket</th>
-                        <th>Jenis Pemeriksaan</th>
-                        <th>Harga</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr th:each="paket, stat : ${pakets}">
-                        <td th:text="${stat.index + 1}"></td>
-                        <td th:text="${paket.namaPaket}"></td>
-                        <td th:text="${paket.jenisPemeriksaan}"></td>
-                        <td th:text="${paket.harga}"></td>
-                        <td>
-                            <a th:href="@{/paket-mcu/edit/{id}(id=${paket.id})}" class="btn btn-warning btn-sm">Edit</a>
-                            <form th:action="@{/paket-mcu/delete/{id}(id=${paket.id})}" method="post" style="display:inline;">
-                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Hapus data ini?')">Hapus</button>
-                            </form>
-                        </td>
-                    </tr>
-                </tbody>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nama Paket</th>
+                  <th>Jenis Pemeriksaan</th>
+                  <th>Harga</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr th:each="paket, stat : ${pakets}">
+                  <td th:text="${stat.index + 1}"></td>
+                  <td th:text="${paket.namaPaket}"></td>
+                  <td th:text="${paket.jenisPemeriksaan}"></td>
+                  <td th:text="${paket.harga}"></td>
+                  <td>
+                    <a th:href="@{/paket-mcu/edit/{id}(id=${paket.id})}" class="btn btn-warning btn-sm">Edit</a>
+                    <form th:action="@{/paket-mcu/delete/{id}(id=${paket.id})}" method="post" style="display:inline;">
+                      <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Hapus data ini?')">Hapus</button>
+                    </form>
+                  </td>
+                </tr>
+              </tbody>
             </table>
         </div>
 
