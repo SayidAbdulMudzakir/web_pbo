@@ -34,23 +34,12 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title text-center">Login Petugas</h2>
-                        <form actions="/loginPetugas" method="post">
-                            @csrf
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email</label>
-                                <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
-                            </div>
-                            <div class="form-check mb-3">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Login</button>
-                            <hr>
-                            <p class="mt-1 text-center" style="color: rgb(104, 150, 251)"><a href="#">Forgot password?</a></p>
+                        <form action="./petugas/dashboardPetugas.html" method="post">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username"><br><br>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password"><br><br>
+                            <button type="submit">Login</button>
                         </form>
                     </div>
                 </div>
