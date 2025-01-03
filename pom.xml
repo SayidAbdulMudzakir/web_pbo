@@ -35,8 +35,9 @@
 <dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-core</artifactId>
-    <version>5.4.32.Final</version> <!-- Use a compatible version -->
+    <version>5.6.10.Final</version> <!-- Pastikan versi ini terbaru yang kompatibel dengan Spring Boot 3.x -->
 </dependency>
+
 
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -57,6 +58,17 @@
         </dependency>
 
         <!-- MySQL Connector for connecting to MySQL database -->
+        <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.30</version> <!-- use the appropriate version -->
+        </dependency>
+<dependency>
+    <groupId>jakarta.persistence</groupId>
+    <artifactId>jakarta.persistence-api</artifactId>
+    <version>3.0.0</version> <!-- Atau versi yang sesuai -->
+</dependency>
+
 
         <!-- Lombok for reducing boilerplate code (getter, setter, etc.) -->
         <dependency>
