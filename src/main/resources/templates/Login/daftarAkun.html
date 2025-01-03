@@ -41,12 +41,11 @@
         <div class="col-md-4">
           <div class="card">
             <div class="card-body">
-              <h2 class="card-title text-center">Login Pasien</h2>
+              <h2 class="card-title text-center">Daftar Akun Pasien</h2>
               <form actions="/loginPasien" method="post">
-                @csrf
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label"
-                    >Email</label
+                    >Username</label
                   >
                   <input
                     type="text"
@@ -57,6 +56,7 @@
                     placeholder="Enter your username"
                   />
                 </div>
+                <!-- Ini untuk Bikin Password -->
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label"
                     >Password</label
@@ -69,6 +69,22 @@
                     placeholder="Enter your password"
                   />
                 </div>
+
+                <!-- Ini untuk verifikasi password -->
+
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label"
+                    >Confirm Password</label
+                  >
+                  <input
+                    type="password"
+                    name="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                    placeholder="Re-Enter your password"
+                  />
+                </div>
+
                 <div class="form-check mb-3">
                   <input
                     type="checkbox"
@@ -79,8 +95,13 @@
                     >Remember me</label
                   >
                 </div>
+                <!-- button daftar  -->
                 <button type="submit" class="btn btn-primary w-100">
-                  <a href="#">Login</a>
+                  Daftar
+                </button>
+                <!-- button login pasien -->
+                <button type="submit" class="btn btn-primary w-100 mt-2">
+                  Daftar Pasien Lama
                 </button>
                 <hr />
                 <p class="mt-1 text-center" style="color: rgb(104, 150, 251)">
